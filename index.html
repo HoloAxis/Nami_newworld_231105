@@ -43,16 +43,22 @@
             // モデルの読み込み
             loader.load(
                 'hair.gltf',  // モデルファイルのパス
-                function (gltf2) {
-                    const model = gltf2.scene;
-                    scene.add(model);
-                },
-
-
-                'body.gltf',  // モデルファイルのパス
                 function (gltf1) {
-                    const model = gltf1.scene;
-                    scene.add(model);
+                    const model1 = gltf1.scene;
+                    scene.add(model1);
+                },
+                undefined,
+                function (error) {
+                    console.error(error);
+                }
+            );
+
+
+            loader.load(
+                'body.gltf',  // モデルファイルのパス
+                function (gltf2) {
+                    const model2 = gltf2.scene;
+                    scene.add(model2);
                 },
                 undefined,
                 function (error) {
