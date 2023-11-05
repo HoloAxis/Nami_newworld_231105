@@ -49,11 +49,11 @@
                 },
 
 
-                //'body.gltf',  // モデルファイルのパス
-                //function (gltf1) {
-                //    const model = gltf1.scene;
-                //    scene.add(model);
-                //},
+                'body.gltf',  // モデルファイルのパス
+                function (gltf1) {
+                    const model = gltf1.scene;
+                    scene.add(model);
+                },
                 undefined,
                 function (error) {
                     console.error(error);
