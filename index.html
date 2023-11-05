@@ -40,15 +40,23 @@
             scene.add(directionalLight);
 
             // GLTFLoaderのインスタンスを作成
-            const loader = new THREE.STLLoader();
+            const loader = new THREE.GLTFLoader();
 
             // モデルの読み込み
             loader.load(
-                'body.stl',  // モデルファイルのパス
-                function (stl) {
-                    const model = stl.scene;
+                'hair.gltf',  // モデルファイルのパス
+                function (gltf_hair) {
+                    const model = gltf_hair.scene;
                     scene.add(model);
                 },
+
+            loader.load(
+                'body.gltf',  // モデルファイルのパス
+                function (gltf_body) {
+                    const model = gltf_body.scene;
+                    scene.add(model);
+                },
+
                 undefined,
                 function (error) {
                     console.error(error);
