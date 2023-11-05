@@ -40,13 +40,13 @@
             scene.add(directionalLight);
 
             // GLTFLoaderのインスタンスを作成
-            const loader = new THREE.GLTFLoader();
+            const loader = new THREE.STLLoader();
 
             // モデルの読み込み
             loader.load(
-                'nami_newworld.gltf',  // モデルファイルのパス
-                function (gltf) {
-                    const model = gltf.scene;
+                'body.stl',  // モデルファイルのパス
+                function (stl) {
+                    const model = stl.scene;
                     scene.add(model);
                 },
                 undefined,
