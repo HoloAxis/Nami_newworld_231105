@@ -53,6 +53,17 @@
                 }
             );
 
+            loader.load(
+                'face2.gltf',  // モデルファイルのパス
+                function (gltf_face) {
+                    const model_face = gltf_face.scene;
+                    scene.add(model_face);
+                },
+                undefined,
+                function (error) {
+                    console.error(error);
+                }
+            );
 
             loader.load(
                 'body.gltf',  // モデルファイルのパス
@@ -72,8 +83,8 @@
             // テクスチャの読み込みと背景への設定
             const textureLoader = new THREE.TextureLoader();
             textureLoader.load(
-                'gradation.jpg',  // 背景画像のパス
-                //'thin.jpg',  // 背景画像のパス
+                //'gradation.jpg',  // 背景画像のパス
+                'thin.jpg',  // 背景画像のパス
                 function (texture) {
                     scene.background = texture;
                 },
