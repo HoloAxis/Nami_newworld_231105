@@ -53,6 +53,7 @@
                 }
             );
 
+            //顔
             loader.load(
                 'face2.gltf',  // モデルファイルのパス
                 function (gltf_face) {
@@ -65,6 +66,20 @@
                 }
             );
 
+            //ビキニ
+            loader.load(
+                'bikini4.gltf',  // モデルファイルのパス
+                function (gltf_bikini4) {
+                    const model_bikini4 = gltf_bikini4.scene;
+                    scene.add(model_bikini4);
+                },
+                undefined,
+                function (error) {
+                    console.error(error);
+                }
+            );
+
+            //体
             loader.load(
                 'body.gltf',  // モデルファイルのパス
                 function (gltf2) {
@@ -83,8 +98,8 @@
             // テクスチャの読み込みと背景への設定
             const textureLoader = new THREE.TextureLoader();
             textureLoader.load(
-                //'gradation.jpg',  // 背景画像のパス
-                'thin.jpg',  // 背景画像のパス
+                'gradation.jpg',  // 背景画像のパス
+                //'thin.jpg',  // 背景画像のパス
                 function (texture) {
                     scene.background = texture;
                 },
