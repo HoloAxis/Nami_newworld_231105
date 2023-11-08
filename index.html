@@ -28,7 +28,7 @@
             const scene = new THREE.Scene();
 
             // カメラの作成
-            const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+            const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10);
             camera.position.z = 4;
             camera.position.y = 1;
 
@@ -98,8 +98,8 @@
             // テクスチャの読み込みと背景への設定
             const textureLoader = new THREE.TextureLoader();
             textureLoader.load(
-                'gradation.jpg',  // 背景画像のパス
-                //'thin.jpg',  // 背景画像のパス
+                //'gradation.jpg',  // 背景画像のパス
+                'thin.jpg',  // 背景画像のパス
                 function (texture) {
                     scene.background = texture;
                 },
