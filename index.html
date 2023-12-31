@@ -76,7 +76,7 @@
                 function (gltf_bikini4) {
                     const model_bikini4 = gltf_bikini4.scene;
                     // モデルのスケールを設定
-                    gltf.scene.scale.set(2, 2, 2); // ここでサイズを指定します
+                    //gltf.scene.scale.set(2, 2, 2); // ここでサイズを指定します
                     scene.add(model_bikini4);
                 },
                 undefined,
@@ -106,8 +106,8 @@
             // テクスチャの読み込みと背景への設定
             const textureLoader = new THREE.TextureLoader();
             textureLoader.load(
-                //'gradation.jpg',  // 背景画像のパス
-                'thin.jpg',  // 背景画像のパス
+                'gradation.jpg',  // 背景画像のパス
+                //'thin.jpg',  // 背景画像のパス
                 function (texture) {
                     scene.background = texture;
                 },
