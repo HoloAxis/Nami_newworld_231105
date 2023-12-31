@@ -33,7 +33,7 @@
             camera.position.y = 1;
 
             // ライトの作成
-            const directionalLight = new THREE.DirectionalLight(0xffffff, 1.3);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
             directionalLight.position.set(0, 1, 1);
             scene.add(directionalLight);
 
@@ -85,7 +85,7 @@
                 function (gltf_bikini4) {
                     const model_bikini4 = gltf_bikini4.scene;
                     scene.add(model_bikini4);
-                    model_bikini4.scale.set(5,5,5);
+                    //model_bikini4.scale.set(5,5,5);
                 },
                 undefined,
                 function (error) {
@@ -113,8 +113,8 @@
             // テクスチャの読み込みと背景への設定
             const textureLoader = new THREE.TextureLoader();
             textureLoader.load(
-                //'gradation.jpg',  // 背景画像のパス
-                'thin.jpg',  // 背景画像のパス
+                'gradation.jpg',  // 背景画像のパス
+                //'thin.jpg',  // 背景画像のパス
                 function (texture) {
                     scene.background = texture;
                 },
