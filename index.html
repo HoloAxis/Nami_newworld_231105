@@ -28,7 +28,7 @@
             const scene = new THREE.Scene();
 
             // カメラの作成
-            const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);//near, far
+            const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.001, 100);//near, far
             camera.position.z = 4;
             camera.position.y = 1;
             camera.near = 0.1;
@@ -55,7 +55,7 @@
                 function (gltf1) {
                     const model1 = gltf1.scene;
                     scene.add(model1);
-                    model1.scale.set(5,5,5); 
+                    //model1.scale.set(5,5,5); 
                 },
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@
                 function (gltf_face) {
                     const model_face = gltf_face.scene;
                     scene.add(model_face);
-                    model_face.scale.set(5,5,5);
+                    //model_face.scale.set(5,5,5);
                 },
                 undefined,
                 function (error) {
@@ -106,7 +106,7 @@
                 function (gltf2) {
                     const model_body = gltf2.scene;
                     scene.add(model_body);
-                    model_body.scale.set(5,5,5);
+                    //model_body.scale.set(5,5,5);
                 },
                 undefined,
                 function (error) {
