@@ -48,7 +48,7 @@
                 function (gltf1) {
                     const model1 = gltf1.scene;
                     scene.add(model1);
-                    model1.scale.set(2,2,2); 
+                    model1.scale.set(10,10,10); 
                 },
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -71,6 +71,7 @@
                 function (gltf_face) {
                     const model_face = gltf_face.scene;
                     scene.add(model_face);
+                    model_face.scale.set(10,10,10);
                 },
                 undefined,
                 function (error) {
@@ -97,6 +98,7 @@
                 function (gltf2) {
                     const model2 = gltf2.scene;
                     scene.add(model2);
+                    model12.scale.set(10,10,10);
                 },
                 undefined,
                 function (error) {
