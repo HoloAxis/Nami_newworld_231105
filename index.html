@@ -41,9 +41,13 @@
             const loader = new THREE.GLTFLoader();
 
             // モデルの読み込み
+
+            //髪
             loader.load(
                 'hair.gltf',  // モデルファイルのパス
                 function (gltf1) {
+                    // モデルのスケールを設定
+                    gltf.scene.scale.set(2, 2, 2); // ここでサイズを指定します
                     const model1 = gltf1.scene;
                     scene.add(model1);
                 },
@@ -98,8 +102,8 @@
             // テクスチャの読み込みと背景への設定
             const textureLoader = new THREE.TextureLoader();
             textureLoader.load(
-                'gradation.jpg',  // 背景画像のパス
-                //'thin.jpg',  // 背景画像のパス
+                //'gradation.jpg',  // 背景画像のパス
+                'thin.jpg',  // 背景画像のパス
                 function (texture) {
                     scene.background = texture;
                 },
