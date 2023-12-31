@@ -38,6 +38,11 @@
             const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
             directionalLight.position.set(0, 1, 1);
             scene.add(directionalLight);
+            
+            // 環境光源を作成
+            // new THREE.AmbientLight(色, 光の強さ)
+            const AmbientLight = new THREE.AmbientLight(0xFFFFFF, 1.0);
+            scene.add(AmbientLight);
 
             // GLTFLoaderのインスタンスを作成
             const loader = new THREE.GLTFLoader();
@@ -115,8 +120,8 @@
             // テクスチャの読み込みと背景への設定
             const textureLoader = new THREE.TextureLoader();
             textureLoader.load(
-                'gradation.jpg',  // 背景画像のパス
-                //'thin.jpg',  // 背景画像のパス
+                //'gradation.jpg',  // 背景画像のパス
+                'thin.jpg',  // 背景画像のパス
                 function (texture) {
                     scene.background = texture;
                 },
