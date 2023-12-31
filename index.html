@@ -48,7 +48,7 @@
                 function (gltf1) {
                     const model1 = gltf1.scene;
                     scene.add(model1);
-                    model1.scale.set(10,10,10); 
+                    model1.scale.set(2,2,2); 
                 },
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -71,7 +71,7 @@
                 function (gltf_face) {
                     const model_face = gltf_face.scene;
                     scene.add(model_face);
-                    model_face.scale.set(10,10,10);
+                    model_face.scale.set(2,2,2);
                 },
                 undefined,
                 function (error) {
@@ -98,7 +98,7 @@
                 function (gltf2) {
                     const model2 = gltf2.scene;
                     scene.add(model2);
-                    model12.scale.set(10,10,10);
+                    model12.scale.set(2,2,2);
                 },
                 undefined,
                 function (error) {
@@ -112,8 +112,8 @@
             // テクスチャの読み込みと背景への設定
             const textureLoader = new THREE.TextureLoader();
             textureLoader.load(
-                'gradation.jpg',  // 背景画像のパス
-                //'thin.jpg',  // 背景画像のパス
+                //'gradation.jpg',  // 背景画像のパス
+                'thin.jpg',  // 背景画像のパス
                 function (texture) {
                     scene.background = texture;
                 },
