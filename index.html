@@ -56,8 +56,6 @@
             //顔
             loader.load(
                 'face2.gltf',  // モデルファイルのパス
-                                    // モデルのスケールを設定
-                gltf.scene.scale.set(2, 2, 2); // ここでサイズを指定します
                 function (gltf_face) {
                     const model_face = gltf_face.scene;
                     scene.add(model_face);
