@@ -97,9 +97,9 @@
             loader.load(
                 'body.gltf',  // モデルファイルのパス
                 function (gltf2) {
-                    const model2 = gltf2.scene;
-                    scene.add(model2);
-                    model12.scale.set(2,2,2);
+                    const model_body = gltf2.scene;
+                    scene.add(model_body);
+                    model_body.scale.set(2,2,2);
                 },
                 undefined,
                 function (error) {
